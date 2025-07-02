@@ -46,10 +46,18 @@ function handleResize() {
 onMounted(() => {
     window.addEventListener('resize', handleResize);
     
-    // Load saved language preference
+    // Load saved language preference or detect browser language
     const savedLanguage = localStorage.getItem('language');
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
         locale.value = savedLanguage;
+    } else {
+        // 检测浏览器语言
+        const browserLanguage = navigator.language || navigator.languages[0];
+        if (browserLanguage.startsWith('zh')) {
+            locale.value = 'zh';
+        } else {
+            locale.value = 'en';
+        }
     }
     
     // Check if initial notice should be shown
@@ -137,20 +145,6 @@ function handleInitialNotice(dontShowAgain: boolean = false) {
 
 // 计算属性来安全地获取统计数据
 const averageStats = computed(() => getAverageStats(output.value, locale.value));
-
-onMounted(() => {
-    // Load saved language preference
-    const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'zh')) {
-        locale.value = savedLanguage;
-    }
-    
-    // Check if initial notice should be shown
-    const hideNotice = localStorage.getItem('hideInitialNotice');
-    if (!hideNotice) {
-        showInitialNotice.value = true;
-    }
-});
 </script>
 
 <template>
