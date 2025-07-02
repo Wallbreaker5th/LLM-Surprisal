@@ -63,7 +63,7 @@
   "chineseChars": "Chinese Characters",
   "avgPerWordNote": "Word counting method may vary by browser support",
   "initialNoticeTitle": "Usage Notice",
-  "initialNoticeContent": "Welcome to the LLM Surprisal Visualizer! Please note the following:\n\n• This website uses Microsoft Clarity for analytics. Although all computations are performed locally and we have configured to not upload text, we recommend avoiding input of confidential or personally sensitive information.\n\n• All model inference computations are executed locally on your device, so initial model loading will consume significant network data and memory, and computations are resource-intensive.\n\n• If you have limited network data or device performance constraints, we recommend using the “Upload Mode” to view our pre-computed example results.",
+  "initialNoticeContent": "Welcome to the LLM Surprisal Visualizer! Please note the following:\n\n• Model downloads from Hugging Face, so please ensure your network can access Hugging Face.\n\n• This website uses Microsoft Clarity for analytics. Although all computations are performed locally and we have configured to not upload text, we recommend avoiding input of confidential or personally sensitive information.\n\n• All model inference computations are executed locally on your device, so initial model loading will consume significant network data and memory, and computations are resource-intensive.\n\n• If you have limited network data or device performance constraints, we recommend using the “Upload Mode” to view our pre-computed example results.",
   "understood": "Understood",
   "doNotShowAgain": "Don't show this again"
 }
