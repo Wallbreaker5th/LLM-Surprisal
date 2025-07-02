@@ -1,0 +1,23 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .line {
+      stroke: #333; /* 可以替换为您网站的主色调 */
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .line-bg {
+      stroke: #ccc; /* 背景线条颜色 */
+      stroke-width: 9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  </style>
+  <path class="line-bg" d="M20 30H80" />
+  <path class="line-bg" d="M20 52H47L55 44L63 52H80" />
+  <path class="line-bg" d="M20 70H80" />
+
+  <path class="line" d="M20 30H80" />
+  <path class="line" d="M20 52H47L55 44L63 52H80" />
+  <path class="line" d="M20 70H80" />
+</svg>
